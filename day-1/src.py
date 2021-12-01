@@ -1,10 +1,14 @@
 # Day 1
+import time
 
 def main():
+    tic = time.perf_counter()
     f = open("input.txt", "r")
     input = [x[:-1] for x in f.readlines()]
-    print("Puzzle 1's output is " + str(partOne(input)))
-    print("Puzzle 2's output is " + str(partTwo(input)))
+    print(f"Puzzle 1's output is {partOne(input)}")
+    print(f"Puzzle 2's output is {partTwo(input)}")
+    toc = time.perf_counter()
+    print(f"Finished in {toc - tic:0.4f} seconds")
 
 def partOne(input):
     count = 0
