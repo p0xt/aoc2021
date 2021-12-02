@@ -1,4 +1,4 @@
-# Day 
+# Day 2
 
 import time 
 
@@ -17,11 +17,11 @@ def partOne(input):
     for x in input:
         digit = int(''.join(filter(str.isdigit, x))) 
         if 'forward' in x:
-            horizontal = horizontal + digit
+            horizontal += digit
         elif 'up' in x:
-            depth = depth - digit
+            depth -= digit
         elif 'down' in x:
-            depth = depth + digit
+            depth += digit
         else:
             print("Error")
             return 0
@@ -32,14 +32,14 @@ def partTwo(input):
     horizontal = 0
     depth = 0
     for x in input:
-        digit = int(''.join(filter(str.isdigit, x))) 
+        digit = int(''.join(filter(str.isdigit, x)))
         if 'forward' in x:
-            horizontal = horizontal + digit
+            horizontal += digit
             depth = depth + aim * digit
         elif 'up' in x:
-            aim = aim - digit
+            aim -= digit
         elif 'down' in x:
-            aim = aim + digit
+            aim += digit
         else:
             print("Error")
             return 0
