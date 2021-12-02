@@ -1,2 +1,4 @@
 # ignore python virtual environment directory
 /venv
+# tests is where I run other people's code
+/02/tests.py
